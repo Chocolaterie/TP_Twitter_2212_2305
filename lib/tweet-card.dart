@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:tp_twitter_2212_2305/tweet.dart';
 
 class TweetCard extends StatelessWidget {
+
+  Tweet tweet;
+
+  TweetCard(this.tweet);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,7 +35,7 @@ class TweetCard extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Chocolatine@gmail.com",
+                              tweet.author,
                               textAlign: TextAlign.left,
                             ),
                             Text(
@@ -40,8 +46,7 @@ class TweetCard extends StatelessWidget {
                         ),
                       ),
                       Expanded(
-                          child: Text(
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore")),
+                          child: Text(tweet.message)),
                     ],
                   ),
                 ),
