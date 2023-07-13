@@ -14,9 +14,10 @@ class _LoginFormState extends State<LoginForm> {
 
   /// Enclenher le contrôle de surface du formulaire
   void onSubmit(){
-
+    // Si validation
     if (formKey.currentState!.validate()){
-      log('Connexion avec succès');
+      // Je change de page
+      Navigator.pushNamed(context, "/twitter-page");
     }
   }
 
