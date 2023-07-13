@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tp_twitter_2212_2305/footer.dart';
 import 'package:tp_twitter_2212_2305/header.dart';
+import 'package:tp_twitter_2212_2305/login-form.dart';
 import 'package:tp_twitter_2212_2305/tweet-card.dart';
 
 class TwitterPage extends StatelessWidget {
@@ -12,7 +13,15 @@ class TwitterPage extends StatelessWidget {
       children: [
         Header(),
         Expanded(child: Container(
-            child:TweetCard())),
+            child:Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: LoginForm(),
+                ),
+                TweetCard(),
+              ],
+            ))),
         Footer(),
       ],),
     );

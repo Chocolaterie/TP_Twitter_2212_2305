@@ -14,9 +14,9 @@ class Header extends StatelessWidget {
             direction: Axis.horizontal,
             children: [
               Expanded(
-                  child: Text(
-                "Nouveau",
-                style: headerTextStyle,
+                  child: IconButton(
+                onPressed: () {},
+                icon: Image.asset("images/pencil.png"),
               )),
               Expanded(
                   child: Text(
@@ -25,10 +25,9 @@ class Header extends StatelessWidget {
                 textAlign: TextAlign.center,
               )),
               Expanded(
-                  child: Text(
-                "Rechercher",
-                style: headerTextStyle,
-                textAlign: TextAlign.right,
+                  child: IconButton(
+                onPressed: () {},
+                icon: Image.asset("images/search.png"),
               )),
             ],
           ),
